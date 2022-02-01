@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  <header>
-    <img src="./src/image/logo.svg" alt="logo do portfolio">
+  <header class="cabecalho">
     <nav class="navegacao">
+      <img class="logo" src="./src/image/logo.svg" alt="logo do portfolio">
       <ul class="lista-navegacao">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre">Sobre</a></li>
@@ -26,86 +26,102 @@
 
   <main>
     <section id="inicio" class="inicio">
-      <div class="foto-perfil">
-        <img src="./src/image/foto2.jpg" alt="foto do perfil">
-      </div>
-      <div>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <hr>
+      <div class="box-inicio">
+        <div class="box-foto">
+          <img class="foto-perfil" src="./src/image/foto2.jpg" alt="foto do perfil">
+        </div>
+        <div class="box-paragrafoPerfil">
+          <hr>
+          <span class="texto-perfil">
+            <h6>Olá! Meu nome é</h6>
+            <h1>Fábio Nobre</h1>
+            <h3>E sou Desenvolvedor Front-End</h3>
+          </span>
+          <hr>
+        </div>
       </div>
     </section>
 
     <section id="sobre" class="sobre">
-      <div class="borda">
+      <div class="box-sobre">
+
         <div class="borda-superior"></div>
         <div class="borda-inferior"></div>
-        <h1 class="titulo">Sobre mim</h1>
-        <p class="paragrafo-sobre">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Maxime cupiditate dolor autem fugiat ex animi, enim sapiente. Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit.
-          Ipsa minima similique quia quisquam tempore iure blanditiis autem minus molestiae quos quibusdam, dolores
-          harum,
-          repellendus cum quaerat possimus perspiciatis commodi enim!</p>
+
+        <div class="box-paragrafoSobre">
+          <h1 class="titulo">Sobre mim</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Maxime cupiditate dolor autem fugiat ex animi, enim sapiente. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit.
+            Ipsa minima similique quia quisquam tempore iure blanditiis autem minus molestiae quos quibusdam, dolores
+            harum,
+            repellendus cum quaerat possimus perspiciatis commodi enim!</p>
+        </div>
+
         <button class="btn-curriculo">Download CV</button>
+
       </div>
     </section>
 
     <section id="projetos" class="projetos">
-      <div></div>
+      <h1 class="titulo">Projetos</h1>
+      <div class="box-projetos"></div>
     </section>
 
     <section id="habilidades" class="habilidades">
-      <div class="box-habilidades">
-        <i class="fab fa-html5"></i>
-        <h3>HTML</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam culpa assumenda adipisci rerum.
-          Odio esse vero beatae quia non minus quam dicta fuga omnis, eos quae vitae praesentium, explicabo harum!</p>
-      </div>
+
+      <h1 class="titulo">Habilidades</h1>
 
       <div class="box-habilidades">
-        <i class="fab fa-css3-alt"></i>
-        <h3>CSS</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam culpa assumenda adipisci rerum.
-          Odio esse vero beatae quia non minus quam dicta fuga omnis, eos quae vitae praesentium, explicabo harum!</p>
-      </div>
+        <div class="box-tecnologia">
+          <i class="fab fa-html5"></i>
+          <h3>HTML</h3>
+          <p>HTMl é uma linguagem de marcação utilizada na construção de páginas na Web. 
+            Documentos HTML podem ser interpretados por navegadores.</p>
+        </div>
 
-      <div class="box-habilidades">
-        <i class="fab fa-js"></i>
-        <h3>JavaScript</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam culpa assumenda adipisci rerum.
-          Odio esse vero beatae quia non minus quam dicta fuga omnis, eos quae vitae praesentium, explicabo harum!</p>
-      </div>
-      <div class="box-habilidades">
-        <i class="fab fa-react"></i>
-        <h3>ReactJs</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam culpa assumenda adipisci rerum.
-          Odio esse vero beatae quia non minus quam dicta fuga omnis, eos quae vitae praesentium, explicabo harum!</p>
-      </div>
+        <div class="box-tecnologia">
+          <i class="fab fa-css3-alt"></i>
+          <h3>CSS</h3>
+          <p>O CSS é uma linguagem de folhas de estilos que é utilizada para definir como os documentos escritos na linguagem de marcação HTML.</p>
+        </div>
 
-      <div class="box-habilidades">
-        <i class="fab fa-git-alt"></i>
-        <h3>Git</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam culpa assumenda adipisci rerum.
-          Odio esse vero beatae quia non minus quam dicta fuga omnis, eos quae vitae praesentium, explicabo harum!</p>
-      </div>
+        <div class="box-tecnologia">
+          <i class="fab fa-js"></i>
+          <h3>JavaScript</h3>
+          <p>JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.</p>
+        </div>
+        <div class="box-tecnologia">
+          <i class="fab fa-react"></i>
+          <h3>ReactJs</h3>
+          <p>O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. </p>
+        </div>
 
-      <div class="box-habilidades">
-        <i class="fab fa-github"></i>
-        <h3>Github</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam culpa assumenda adipisci rerum.
-          Odio esse vero beatae quia non minus quam dicta fuga omnis, eos quae vitae praesentium, explicabo harum!</p>
+        <div class="box-tecnologia">
+          <i class="fab fa-git-alt"></i>
+          <h3>Git</h3>
+          <p>Git é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software.</p>
+        </div>
+
+        <div class="box-tecnologia">
+          <i class="fab fa-github"></i>
+          <h3>Github</h3>
+          <p>GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git. </p>
+        </div>
       </div>
     </section>
 
     <section id="contato" class="contato">
-      <div>
-        <i class="fas fa-phone"></i>
-        <p>+55 24 99998-1024</p>
+      <h1 class="titulo">Contato</h1>
+      <div class="box-contato">
+        <div class="telefone">
+          <i class="fas fa-phone"></i>
+          <p>+55 24 99998-1024</p>
+        </div>
+        <i class="fab fa-whatsapp-square"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github-square"></i>
       </div>
-      <i class="fab fa-whatsapp-square"></i>
-      <i class="fab fa-linkedin"></i>
-      <i class="fab fa-github"></i>
     </section>
   </main>
 
