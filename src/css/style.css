@@ -46,18 +46,38 @@ header.cabecalho .navegacao li {
 }
 
 header.cabecalho .navegacao a {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
-  padding: 15px;
-  color: #ffffff;
+  margin: 0 30px;
+  padding: 8px 0;
+  color: #DDDDDD;
   font-family: 'Roboto bold 700';
   font-weight: bold;
-  transition: 0.3s ease-in-out;
+  letter-spacing: 1px;
 }
 
 header.cabecalho .navegacao a:hover {
-  background-color: #ffe60083;
-  border-radius: 8px;
+  color: #ffffff;
 }
+
+header.cabecalho .navegacao a span {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #FFE60028, #FFE600);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.3s ease-in-out;
+}
+
+header.cabecalho .navegacao a:hover span {
+  transform: scaleX(1);
+  transition: 0.5s ease-in-out;
+}
+
 
 /* Inicio */
 
@@ -74,6 +94,7 @@ section.inicio .box-inicio {
   width: 80%;
   height: 50vh;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -96,7 +117,7 @@ section.inicio .box-inicio .foto-perfil {
 }
 
 section.inicio .box-paragrafoPerfil {
-  width: 50%;
+  width: 60%;
   height: 90%;
   margin-left: 50px;
   display: flex;
@@ -111,13 +132,17 @@ section.inicio .box-paragrafoPerfil hr {
   border: none;
 }
 
-section.inicio  .box-paragrafoPerfil .texto-perfil {
-  color: #ffffff;
-  font-size: 26px;
+section.inicio  .box-paragrafoPerfil .texto-perfil h1 {
+  text-align: start;
+  color: #FFE600;
+  font-size: 36px;
 }
 
-section.inicio  .box-paragrafoPerfil .texto-perfil h3 {
-  color: #FFE600;
+section.inicio  .box-paragrafoPerfil .texto-perfil p{
+  color: #ffffff;
+  font-size: 22px;
+  text-align: start;
+  letter-spacing: 1px;
 }
 
 /* Sobre */
@@ -201,6 +226,7 @@ section.sobre .box-sobre h1 {
 section.sobre .box-sobre p {
   color: #ffffff;
   padding: 10px;
+  text-align: start;
 }
 
 section.sobre .box-sobre .btn-curriculo {
@@ -297,6 +323,7 @@ section.sobre .box-sobre .btn-curriculo:hover {
    color: #ffffff;
    padding: 8px;
    font-size: 14px;
+   text-align: start;
  }
 
  section.habilidades .box-tecnologia .fa-html5 {
