@@ -1,42 +1,30 @@
 const projeto = document.querySelectorAll('.projeto')
 const seta_voltar = document.querySelector('.seta-voltar')
 const seta_avancar = document.querySelector('.seta-avancar')
-let projetoAtual = 0
 
-esconder = () => {
+const lastSlide = projeto.length -1
+let valorIndex = 0
 
-  projeto.forEach(item => {
-    item.classList.remove('mostrar')
-  })
 
-}
+manipulateSlides = (currentIndex) => {
 
-mostrar = () => {
-
-  projeto[projetoAtual].classList.add('mostrar')
+  projeto.forEach(item => item.classList.remove('mostrar'))
+  projeto[currentIndex].classList.add('mostrar')
 
 }
 
 seta_voltar.addEventListener('click', () => {
 
-  if(projetoAtual === 0){
-    return
-  }
-  -- projetoAtual
+  const currentIndex = valorIndex === 0 ? valorIndex = lastSlide : --valorIndex
   
-  esconder()
-  mostrar()
+  manipulateSlides(currentIndex)
 
 })
 
 seta_avancar.addEventListener('click', () => {
 
-  if(projetoAtual === projeto.length -1){
-    return
-  }
-  projetoAtual ++
+  const currentIndex = valorIndex === lastSlide ? valorIndex = 0 : ++valorIndex
   
-  esconder()
-  mostrar()
-console.log(projeto)
+  manipulateSlides(currentIndex)
+
 })
