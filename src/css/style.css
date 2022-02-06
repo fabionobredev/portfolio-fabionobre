@@ -19,9 +19,9 @@ body {
 
 header.cabecalho {
   width: 100%;
-  padding: 20px;
+  height: 80px;
   display: flex;
-  background-color: #1E1B1B;
+  background-color: #1e1b1b;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -79,6 +79,11 @@ header.cabecalho .navegacao a:hover span {
   transition: 0.5s ease-in-out;
 }
 
+@media(max-width: 768px) {
+  header.cabecalho {
+    display: none;
+  }
+}
 
 /* Inicio */
 
@@ -88,15 +93,14 @@ section.inicio {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 section.inicio .box-inicio {
   width: 80%;
-  height: 50vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 80px;
 }
 
 section.inicio .box-inicio .box-foto {
@@ -128,7 +132,7 @@ section.inicio .box-paragrafoPerfil {
 
 section.inicio .box-paragrafoPerfil hr {
   width: 50%;
-  height: 5px;
+  height: 2px;
   background-color: #FFE600;
   border: none;
 }
@@ -139,11 +143,40 @@ section.inicio  .box-paragrafoPerfil .texto-perfil h1 {
   font-size: 36px;
 }
 
-section.inicio  .box-paragrafoPerfil .texto-perfil p{
+section.inicio  .box-paragrafoPerfil .texto-perfil p, strong{
   color: #ffffff;
   font-size: 22px;
   text-align: start;
   letter-spacing: 1px;
+}
+
+@media(max-width: 768px) {
+
+  section.inicio .box-inicio {
+    width: 100%;
+    height: 70%;
+    flex-direction: column;
+  }
+
+  section.inicio .box-inicio .box-foto {
+    width: 200px;
+    height: 200px;
+  }  
+  
+  section.inicio .box-paragrafoPerfil {
+    width: 80%;
+    height: 40%;
+    display: flex;
+  }
+
+  section.inicio  .box-paragrafoPerfil .texto-perfil h1 {
+    font-size: 28px;
+  }
+  
+  section.inicio  .box-paragrafoPerfil .texto-perfil p, strong{
+    font-size: 18px;
+  }
+    
 }
 
 /* Sobre */
@@ -268,7 +301,7 @@ section.sobre .box-sobre .btn-curriculo:hover {
  }
 
  section.projetos .box-projetos {
-   width: 50%;
+   min-width: 600px;
    height: 60vh;
    position: relative;
    background-color: #03A1FA;
@@ -308,7 +341,7 @@ section.projetos .box-projetos .seta-voltar {
   left: 20px;
   transform: rotate(180deg);
   cursor: pointer;
-  z-index: 999;
+  z-index: 9;
 }
 
 section.projetos .box-projetos .seta-avancar {
@@ -321,7 +354,7 @@ section.projetos .box-projetos .seta-avancar {
   top: 50%;
   right: 20px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 9;
 }
 
 
@@ -329,82 +362,87 @@ section.projetos .box-projetos .seta-avancar {
 
  section.habilidades {
    width: 100%;
-   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ section.habilidades .box-habilidades {
+   width: 70%;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   margin-top: 120px;
  }
 
  section.habilidades .titulo {
   font-family: 'Roboto bold 700';
   font-size: 32px;
   color: #FFE600;
-  margin-top: 80px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
  }
 
- section.habilidades .box-habilidades {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+ section.habilidades .box-tecnologias {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-gap: 10px;
+  justify-items: center;
  }
 
- section.habilidades .box-tecnologia {
-   width: 25%;
-   height: 30vh;
-   margin: 8px;
+ section.habilidades .tecnologia {
+   width: 300px;
+   height: 200px;
    border-color: #FFE600;
    border-style: solid;
    border-width: 1px;
  }
 
- section.habilidades .box-tecnologia i {
+ section.habilidades .box-tecnologias i {
    font-size: 50px;
    width: 100%;
    padding: 8px;
  }
 
- section.habilidades .box-tecnologia h3 {
+ section.habilidades .box-tecnologias h3 {
    padding: 8px;
    color: #ffffff;
  }
 
- section.habilidades .box-tecnologia p {
+ section.habilidades .box-tecnologias p {
    color: #ffffff;
    padding: 8px;
    font-size: 14px;
    text-align: start;
  }
 
- section.habilidades .box-tecnologia .fa-html5 {
+ section.habilidades .box-tecnologias .fa-html5 {
   color: #FA9703;
   text-align: center;
 }
 
- section.habilidades .box-tecnologia .fa-css3-alt {
+ section.habilidades .box-tecnologias .fa-css3-alt {
   color: #03A1FA;
   text-align: center;
 }
 
- section.habilidades .box-tecnologia .fa-js {
+ section.habilidades .box-tecnologias .fa-js {
   color: #FFE600;
   text-align: center;
 }
 
- section.habilidades .box-tecnologia .fa-react {
+ section.habilidades .box-tecnologias .fa-react {
   color: #23D675;
   text-align: center;
 }
 
- section.habilidades .box-tecnologia .fa-git-alt {
+ section.habilidades .box-tecnologias .fa-git-alt {
   color: #CA1D1D;
   text-align: center;
 }
 
- section.habilidades .box-tecnologia .fa-github {
+ section.habilidades .box-tecnologias .fa-github {
   color: #ffffff;
   text-align: center;
 }
@@ -422,7 +460,7 @@ section.projetos .box-projetos .seta-avancar {
   font-size: 32px;
   color: #FFE600;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
  }
 
  section.contato .box-contato {
