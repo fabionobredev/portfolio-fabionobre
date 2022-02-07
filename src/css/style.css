@@ -22,24 +22,19 @@ header.cabecalho {
   height: 80px;
   display: flex;
   background-color: #1e1b1b;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   z-index: 999;
 }
 
-header.cabecalho .navegacao {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
+header.cabecalho .logo {
+  margin: 0 30px;
 }
 
 header.cabecalho .navegacao ul{
-  min-width: 400px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 header.cabecalho .navegacao li {
@@ -80,9 +75,78 @@ header.cabecalho .navegacao a:hover span {
 }
 
 @media(max-width: 768px) {
-  header.cabecalho {
+  header.cabecalho .navegacao ul {
     display: none;
   }
+
+  header.cabecalho .navegacao ul.active {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 50%;
+    height: 90vh;
+    border-radius: 5px;
+  }
+
+  header.cabecalho .navegacao ul.active li {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+ 
+  header.cabecalho .toggle {
+    position: absolute;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  header.cabecalho .toggle.active {
+    background-color: #72714350;
+    border-radius: 50%;
+    z-index: 9;
+  }
+  
+  header.cabecalho .toggle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 0 #ffffff;
+    transition: 0.3s ease-in-out;
+  }
+
+  header.cabecalho .toggle.active::after {
+    background-color: transparent;
+    transform: rotate(40deg);
+    width: 80%;
+    top: 6px;
+    left: 10px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  header.cabecalho .toggle::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: 0.3s ease-in-out;
+  }
+
+  header.cabecalho .toggle.active::before {
+    transition: 0.3s ease-in-out;
+    transform: rotate(-40deg);
+    width: 80%;
+    top: 14px;
+    left: 3px;
+  }
+
 }
 
 /* Inicio */
@@ -98,7 +162,7 @@ section.inicio {
 section.inicio .box-inicio {
   width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-top: 80px;
 }
@@ -124,7 +188,6 @@ section.inicio .box-inicio .foto-perfil {
 section.inicio .box-paragrafoPerfil {
   width: 60%;
   height: 90%;
-  margin-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -150,6 +213,17 @@ section.inicio  .box-paragrafoPerfil .texto-perfil p, strong{
   letter-spacing: 1px;
 }
 
+section.inicio .box-paragrafoPerfil .curriculo {
+  text-decoration: none;
+  width: 150px;
+  padding: 8px;
+  background-color: #ffe6005e;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 80px;
+}
+
 @media(max-width: 768px) {
 
   section.inicio .box-inicio {
@@ -164,9 +238,14 @@ section.inicio  .box-paragrafoPerfil .texto-perfil p, strong{
   }  
   
   section.inicio .box-paragrafoPerfil {
-    width: 80%;
-    height: 40%;
+    width: 90%;
+    height: 60%;
     display: flex;
+    margin-top: 40px;
+  }
+  
+  section.inicio .box-paragrafoPerfil .curriculo {
+    margin-top: 30px;
   }
 
   section.inicio  .box-paragrafoPerfil .texto-perfil h1 {
@@ -181,7 +260,7 @@ section.inicio  .box-paragrafoPerfil .texto-perfil p, strong{
 
 /* Sobre */
 
-section.sobre {
+/* section.sobre {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -278,7 +357,7 @@ section.sobre .box-sobre .btn-curriculo {
 section.sobre .box-sobre .btn-curriculo:hover {
   background-color: #ffe6008c;
   cursor: pointer;
-}
+} */
 
 
  /* Projetos */
@@ -304,7 +383,6 @@ section.sobre .box-sobre .btn-curriculo:hover {
    min-width: 600px;
    height: 60vh;
    position: relative;
-   background-color: #03A1FA;
  }
 
  section.projetos .box-projetos .projeto {
@@ -355,6 +433,12 @@ section.projetos .box-projetos .seta-avancar {
   right: 20px;
   cursor: pointer;
   z-index: 9;
+}
+
+@media(max-width: 768px) {
+  section.projetos .box-projetos {
+    min-width: 80%;
+  }
 }
 
 

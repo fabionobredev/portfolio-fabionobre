@@ -1,10 +1,16 @@
 const projeto = document.querySelectorAll('.projeto')
 const seta_voltar = document.querySelector('.seta-voltar')
 const seta_avancar = document.querySelector('.seta-avancar')
+const toggleBar = document.querySelector('.toggle')
+const toggleList = document.querySelector('ul')
 
 const lastSlide = projeto.length -1
 let valorIndex = 0
 
+toggleBar.addEventListener('click', () => {
+  toggleBar.classList.toggle('active')
+  toggleList.classList.toggle('active')
+})
 
 manipulateSlides = (currentIndex) => {
 
