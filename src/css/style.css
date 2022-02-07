@@ -208,7 +208,7 @@ section.inicio  .box-paragrafoPerfil .texto-perfil h1 {
 
 section.inicio  .box-paragrafoPerfil .texto-perfil p, strong{
   color: #ffffff;
-  font-size: 22px;
+  font-size: 16px;
   text-align: start;
   letter-spacing: 1px;
 }
@@ -251,11 +251,7 @@ section.inicio .box-paragrafoPerfil .curriculo {
   section.inicio  .box-paragrafoPerfil .texto-perfil h1 {
     font-size: 28px;
   }
-  
-  section.inicio  .box-paragrafoPerfil .texto-perfil p, strong{
-    font-size: 18px;
-  }
-    
+      
 }
 
 /* Sobre */
