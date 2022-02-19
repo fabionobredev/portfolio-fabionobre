@@ -3,6 +3,7 @@ const seta_voltar = document.querySelector('.seta-voltar')
 const seta_avancar = document.querySelector('.seta-avancar')
 const toggleBar = document.querySelector('.toggle')
 const toggleList = document.querySelector('ul')
+const fadeIn = document.querySelectorAll('.box-projetos')
 
 const lastSlide = projeto.length -1
 let valorIndex = 0
@@ -11,6 +12,19 @@ toggleBar.addEventListener('click', () => {
   toggleBar.classList.toggle('active')
   toggleList.classList.toggle('active')
 })
+
+fadeIn.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    item.classList.add('active')
+  })
+})
+
+fadeIn.forEach(item => {
+  item.addEventListener('mouseout', () => {
+    item.classList.remove('active')
+  })
+})
+
 
 manipulateSlides = (currentIndex) => {
 
