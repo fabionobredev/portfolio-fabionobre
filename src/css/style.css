@@ -224,7 +224,11 @@ section.inicio .box-paragrafoPerfil .curriculo {
   margin-top: 80px;
 }
 
-@media(max-width: 768px) {
+section.inicio .box-paragrafoPerfil .curriculo:hover {
+  background-color: #ffe6008a;
+}
+
+@media(max-width: 998px) {
 
   section.inicio .box-inicio {
     width: 100%;
