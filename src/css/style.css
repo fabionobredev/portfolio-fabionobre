@@ -13,6 +13,7 @@ html {
 body {
   background-color: #141313;
   font-family: 'Roboto', Verdana, Tahoma, sans-serif;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -48,8 +49,8 @@ header.cabecalho .navegacao a {
   margin: 0 30px;
   padding: 8px 0;
   color: #DDDDDD;
-  font-family: 'Roboto bold 700';
-  font-weight: bold;
+  font-family: 'Roboto bold', sans-serif;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
@@ -198,6 +199,7 @@ section.inicio .box-paragrafoPerfil hr {
   height: 2px;
   background-color: #FFE600;
   border: none;
+  margin: 15px 0;
 }
 
 section.inicio  .box-paragrafoPerfil .texto-perfil h1 {
@@ -270,17 +272,20 @@ section.inicio .box-paragrafoPerfil .curriculo:hover {
  }
 
  section.projetos .titulo {
-   font-family: 'Roboto bold 700';
+   font-family: 'Roboto', sans-serif;
+   font-weight: 700;
    font-size: 32px;
    color: #FFE600;
-   margin-top: 60px;
+   margin-top: 80px;
    margin-bottom: 40px;
  }
 
  section.projetos .box-projetos {
-   min-width: 600px;
-   height: 60vh;
+   padding: 15% 30%;
    position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
 
  section.projetos .box-projetos .projeto {
@@ -349,15 +354,15 @@ section.projetos .box-projetos:hover .projeto .slideInformation {
 section.projetos .box-projetos.active .projeto .slideInformation span,
 section.projetos .box-projetos.active .projeto .slideInformation h1,
 section.projetos .box-projetos.active .projeto .slideInformation a{
-  animation: fadeIn 5s linear;
+  animation: fadeIn 2s linear;
 }
+
 
 section.projetos .box-projetos .projeto-1 {
   background-image: url(../image/projetoAgencia.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
-  position: relative; 
 }
 
 section.projetos .box-projetos .projeto-2 {
@@ -365,7 +370,6 @@ section.projetos .box-projetos .projeto-2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
-  position: relative; 
 }
 
 
@@ -374,7 +378,6 @@ section.projetos .box-projetos .projeto-3 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
-  position: relative; 
 }
 
 section.projetos .box-projetos .projeto-4 {
@@ -382,7 +385,6 @@ section.projetos .box-projetos .projeto-4 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
-  position: relative; 
 }
 
 section.projetos .box-projetos .projeto-5 {
@@ -390,7 +392,6 @@ section.projetos .box-projetos .projeto-5 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
-  position: relative; 
 }
 
 section.projetos .box-projetos .projeto-5 h1 {
@@ -401,39 +402,46 @@ section.projetos .box-projetos .mostrar {
   display: block;
 }
 
-section.projetos .box-projetos .seta-voltar {
-  background-image: url('../image/seta.png');
-  background-repeat: no-repeat;
-  background-size: contain;
+section.projetos .box-projetos img {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  width: 35px;
-  height: 35px;
-  top: 50%;
-  left: 20px;
-  transform: rotate(180deg);
+  top: 0;
+  left: 0;
+}
+
+section.projetos .box-projetos .seta-voltar {
+  position: absolute;
+  padding: 2%;
+  z-index: 1;
   cursor: pointer;
-  z-index: 9;
+  transform: rotate(180deg);
+  left: 4%;
 }
 
 section.projetos .box-projetos .seta-avancar {
-  background-image: url('../image/seta.png');
-  background-repeat: no-repeat;
-  background-size: contain;
   position: absolute;
-  width: 35px;
-  height: 35px;
-  top: 50%;
-  right: 20px;
+  padding: 2%;
+  z-index: 1;
   cursor: pointer;
-  z-index: 9;
+  right: 4%;
 }
 
-@media(max-width: 768px) {
-  section.projetos .box-projetos {
-    min-width: 80%;
+@media(max-width: 400px) {
+
+  section.projetos {
+    height: 60vh;
   }
-}
+ 
+  section.projetos .box-projetos {
+    padding: 25% 40%;
+  }
 
+  section.projetos .box-projetos .projeto .slideInformation h1 {
+    font-size: 18px;
+  }
+ 
+}
 
  /* Habilidades */
 
@@ -463,7 +471,7 @@ section.projetos .box-projetos .seta-avancar {
  section.habilidades .box-tecnologias {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   grid-gap: 10px;
   justify-items: center;
  }
@@ -524,16 +532,28 @@ section.projetos .box-projetos .seta-avancar {
   text-align: center;
 }
 
+@media(max-width: 400px) {
+  section.habilidades .box-habilidades {
+    width: 100%;
+  }
+  section.habilidades .tecnologia {
+    width: 80%;
+   }
+  
+}
 
  /* Contato */
 
  section.contato {
-   width: 100%;
-   height: 60vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
  }
 
  section.contato .titulo {
-  font-family: 'Roboto bold 700';
+  font-family: 'Roboto' sans-serif;
+  font-weight: 700;
   font-size: 32px;
   color: #FFE600;
   text-align: center;
@@ -546,9 +566,6 @@ section.projetos .box-projetos .seta-avancar {
    display: flex;
    justify-content: space-around;
    align-items: center;
-   top: 0;
-   left: 0;
-   margin: auto;
  }
 
  section.contato .box-contato .telefone {
@@ -558,7 +575,14 @@ section.projetos .box-projetos .seta-avancar {
    flex-direction: column;
  }
 
- section.contato .box-contato .telefone i, p{
+ section.contato .box-contato .redeSocial {
+   width: 50%;
+   display: flex;
+   justify-content: space-around;
+ }
+
+ section.contato .box-contato .telefone i, 
+ section.contato .box-contato .telefone p{
    color: #ffffff;
    padding: 8px;
    text-align: center;
@@ -566,6 +590,7 @@ section.projetos .box-projetos .seta-avancar {
 
  section.contato i {
    font-size: 50px;
+   padding: 5px;
  }
 
  section.contato .fa-whatsapp-square {
@@ -580,6 +605,12 @@ section.projetos .box-projetos .seta-avancar {
    color: #ffffff;
  }
 
+ @media(max-width: 400px) {
+  section.contato .box-contato {
+    flex-direction: column;
+  } 
+ }
+
  /* footer */
 
  footer{
@@ -588,7 +619,6 @@ section.projetos .box-projetos .seta-avancar {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: #1E1B1B;
  }
 
  footer p {
@@ -596,3 +626,10 @@ section.projetos .box-projetos .seta-avancar {
    font-weight: bold;
    color: #FFE600;
  }
+
+ @media(max-width: 400px) {
+  footer p {
+    font-size: 12px;
+  } 
+ }
+
